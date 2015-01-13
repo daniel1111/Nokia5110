@@ -41,6 +41,8 @@ void Nokia5110::init(uint8_t scePin, uint8_t rstPin, uint8_t dcPin, uint8_t sdin
   _sdinPin = sdinPin;  // DN(MOSI) - Serial data, pin 6 on LCD.
   _sclkPin = sclkPin;  // SCLK - Serial clock, pin 7 on LCD.
   _blPin = blPin;      // LED - Backlight LED, pin 8 on LCD.    
+  
+  memset(displayMap, 0, sizeof(displayMap));
 }
 
 void Nokia5110::updateDisplay()
